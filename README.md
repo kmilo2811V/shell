@@ -1,1 +1,1 @@
-mi primer script
+shell
