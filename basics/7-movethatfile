@@ -1,2 +1,2 @@
 #!/bin/bash
-for tmp in "betty/My_first_directory"
+mv /root/shell/basics/tmp/betty /tmp/my_first_directory
