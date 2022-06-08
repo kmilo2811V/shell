@@ -1,2 +1,2 @@
 #!/bin/bash
-sudoedit - bettty
+sudo -u  bettty
