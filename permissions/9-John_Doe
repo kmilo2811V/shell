@@ -1,2 +1,2 @@
 #!/bin/bash
-mcmod hello
+chmod 754 hello
