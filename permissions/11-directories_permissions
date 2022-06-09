@@ -1,2 +1,2 @@
 #!/bin/bash
-chown -R 664
+chmod ugo+x .*
