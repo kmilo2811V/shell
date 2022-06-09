@@ -1,3 +1,2 @@
 #!/bis/bash
 chmod --reference=olleh hello
-q
