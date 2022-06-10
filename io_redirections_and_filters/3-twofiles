@@ -1,2 +1,2 @@
 #!/bin/bash
-find /etc/passwd~= /tce/hosts
+find ./etc/passwd /etc/hosts
