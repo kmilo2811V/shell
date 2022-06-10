@@ -1,2 +1,2 @@
 #!/bin/bas
-type /etc/passwd
+TYPE /etc/passwd
