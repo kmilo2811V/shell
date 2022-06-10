@@ -1,2 +1,2 @@
 #!/bin/bas
-head /etc/passwd
+echo /etc/passwd
