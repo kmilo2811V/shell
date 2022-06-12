@@ -1,3 +1,5 @@
 #!/bin/env bash
-for i in {0..10);do
-	 echo "Best School" $i"
+to_print="Best School"
+echo $to_print
+to_print=1.11
+echo $to_print
