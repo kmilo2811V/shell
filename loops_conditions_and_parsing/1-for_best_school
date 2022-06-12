@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 for in "$LIST"{1..11};do 
-	   echo "Best Shool"
-	   done
-      
+	   echo "Best Shool $i"
+done
