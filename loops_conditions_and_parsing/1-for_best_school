@@ -1,5 +1,4 @@
-#!/bin/env bash
-to_print="Best School"
-echo $to_print
-to_print=1.11
-echo $to_print
+#!/usr/bin/env bash
+for in LIST(1,11)
+       echo "Best Shool"
+       
