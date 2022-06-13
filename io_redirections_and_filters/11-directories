@@ -1,2 +1,2 @@
 #!/bin/bash
-echo | ls -t | sort | unique -u
+echo | "ls" -t | sort | unique -u
