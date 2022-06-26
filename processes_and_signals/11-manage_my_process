@@ -1,14 +1,25 @@
 #!/usr/bin/env bash
-# This script runs various functions
-# shellcheck disable=SC2002
-# shellcheck disable=SC2034
-echo ps a | pgrep -f 100-process_and_pid_file > /var/run/myscript.pid
-PROCESS="$(cat /var/run/myscript.pid | head -1)"
-while :
-do
-trap "rm /var/run/myscript.pid" SIGQUIT
-trap "echo I hate the kill command; rm /var/run/myscript.pid; exit" SIGTERM
-trap "echo Y U no love me?!" SIGINT
-echo "To infinity and beyond"
-sleep 2
-done
+# Manages 'manage_my_process'
+
+if [ "${1}" == "start" ]
+then
+./manage_my_process &
+touch /var/run/my_process.pid
+echo "$!" > /var/run/my_process.pid
+echo "manage_my_process started"
+elif [ "${1}" == "stop" ]
+then
+echo "manage_my_process stopped"
+kill "$(cat /var/run/my_process.pid)"
+rm /var/run/my_process.pid
+elif [ "${1}" == "restart" ]
+then
+kill "$(cat /var/run/my_process.pid)"
+rm /var/run/my_process.pid
+./manage_my_process &
+touch /var/run/my_process.pid
+echo "$!" > /var/run/my_process.pid
+echo "manage_my_process restarted"
+else
+echo "Usage: manage_my_process {start|stop|restart}"
+fi
